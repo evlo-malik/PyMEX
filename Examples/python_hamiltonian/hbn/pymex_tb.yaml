@@ -1,0 +1,63 @@
+Absorption:
+  photon_energy:
+    max: 12
+    min: -1
+    sigma: 0.025
+    step: 0.005
+  spin: unpolarized
+  spinorbit:
+    type: perturbation
+    unfold: false
+bse:
+  Qpoints:
+    hspoints:
+    - - 0.0
+      - 0.0
+      - 0.0
+    num_points: 1
+  method: tb
+  tb:
+    bands:
+      cb_idx:
+      - 1
+      - 2
+      vb_idx:
+      - 0
+      - 1
+    engine: python
+    kgrid:
+    - 6
+    - 6
+    - 1
+    model: model.py
+cpu:
+  multithreading: true
+diagonalize:
+  library: lapack
+eh_interaction:
+  include:
+    direct: false
+    exchange: false
+    screen_exchange: false
+  real:
+    a0: 1.45
+    epsilon_b: 1.0
+    epsilon_t: 1.0
+    layer: monolayer
+    potential: Keldysh
+    rho0: 10
+    type: analytic
+    zav: 0.0
+  space: real
+excitation: exciton
+gpu:
+  streams: 4
+io:
+  exciton_conductivity_file: Conductivity_exciton_tb.hdf5
+  exciton_eigenval_file: Eigval_exciton_tb.hdf5
+  exciton_eigenvec_file: Eigvec_exciton_tb.hdf5
+  exciton_hamiltonian_file: H_exciton_tb.hdf5
+  exciton_wfn_rh_file: Exciton_rh_tb.hdf5
+material: 2D
+restart: from_scratch
+system: cpu

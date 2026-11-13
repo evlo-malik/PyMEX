@@ -8,6 +8,7 @@ import os
 import shutil
 import sys
 import time
+from pathlib import Path
 from functools import partial
 from itertools import combinations
 
@@ -22,6 +23,8 @@ from potential import *
 from dft2bse import *
 from addsoc import *
 from cyfunc import *
+from python_tb import PythonTB
+from python_tb_config import prepare_python_config, uses_python_model
 
 
 from mpi4py import MPI
@@ -52,9 +55,11 @@ class BSE(object):
     # --------------------
     self.inp_file = inp_file 
     self.config = print_yaml(self.inp_file)
+    prepare_python_config(self.config)
     self.restart = self.config.get("restart", {})
     self.check_all()  
-    self.estimate_memory_from_config()
+    if not uses_python_model(self.config):
+      self.estimate_memory_from_config()
 
     #-----------------------------------------------
     # Set up single particle bands and wavefunctions
@@ -63,20 +68,35 @@ class BSE(object):
     #              are read from files. [Old/Not maintained.]
     # When "tb": eigenvalues and eigenfunctions are 
     #             generated using Wannier90 Hamiltonian.
-    wannier = self.config["bse"]["wannier_io"]
-    if self.config["bse"]["method"] == "dft":
-      cnmk_inp = self.config["bse"]["dft"]["cnmk"]
-    elif self.config["bse"]["method"] == "tb":
-      cnmk_inp = self.config["bse"]["tb"]["cnmk"]
+    if uses_python_model(self.config):
+      tb = self.config["bse"]["tb"]
+      model_path = Path(self.inp_file).resolve().parent / tb["model"]
+      self.wan2bse = PythonTB(model_path, tb["kgrid"], tb.get("derivative_step", 1e-5),
+                              geometry=tb.get("geometry"))
+      self.wan2bse.validate_bands(tb["bands"])
+      if rank == root:
+        np.savez("model_geometry.npz", lattice=self.wan2bse.get_lattice(),
+                 centres=self.wan2bse.get_WF_loc(), kgrid=tb["kgrid"])
+      self.estimate_memory_from_config()
+    else:
+      wannier = self.config["bse"]["wannier_io"]
+      if self.config["bse"]["method"] == "dft":
+        cnmk_inp = self.config["bse"]["dft"]["cnmk"]
+      elif self.config["bse"]["method"] == "tb":
+        cnmk_inp = self.config["bse"]["tb"]["cnmk"]
 
-    self.wan2bse = WAN2BSE(wannier["win_file"], cnmk_inp["file"],
-                           wannier["hr_file"], wannier["wsvec_file"],
-                           wannier["wout_file"])
+      self.wan2bse = WAN2BSE(wannier["win_file"], cnmk_inp["file"],
+                             wannier["hr_file"], wannier["wsvec_file"],
+                             wannier["wout_file"])
 
     if self.config["bse"]["method"] == "dft":
       self._setup_dft()
     elif self.config["bse"]["method"] == "tb":
       self._setup_tb()
+      if uses_python_model(self.config):
+        gap = np.min(self.E_ckplusQ) - np.max(self.E_vk)
+        if gap <= 0:
+          raise ValueError("The selected valence/conduction bands must describe a gapped semiconductor.")
     if rank == root:
       print_f("Received single-particle eigenvalues and Cnmk's")
       print_f(f"Time spent so far: {time.time() - self.t0:.4f} secs.\n")
@@ -247,7 +267,10 @@ class BSE(object):
                                         mode=wf_loc)
     if rank == root: 
       print_f()
-      print_f(f"Mapped Wannier functions with {wf_loc} method.")
+      if uses_python_model(self.config):
+        print_f("Using orbital centres supplied by the Python model.")
+      else:
+        print_f(f"Mapped Wannier functions with {wf_loc} method.")
       if using_mlwf:
         print_f("Final positions of Wannier functions include MLWF centers.")        
 
@@ -3219,8 +3242,11 @@ class BSE(object):
     re            = nc * nv * nk
     diagon_method = self.config.get("diagonalize", {}).get("library", "lapack")
 
-    wannier  = self.config["bse"]["wannier_io"]
-    nW       = self._read_nwann_from_win(wannier["win_file"])
+    if uses_python_model(self.config):
+      nW = self.wan2bse.get_num_wann()
+    else:
+      wannier = self.config["bse"]["wannier_io"]
+      nW = self._read_nwann_from_win(wannier["win_file"])
 
     add_direct        = self.config.get("eh_interaction", {}).get("include", {}).get("direct", False)
     add_exchange      = self.config.get("eh_interaction", {}).get("include", {}).get("exchange", False)

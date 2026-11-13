@@ -98,6 +98,10 @@ compiled modules can be imported.
 
 ## ▶️ Usage
 
+For a model supplied as a Python `hamiltonian(k)`, see the
+[experimental Python input examples](Examples/python_hamiltonian/README.md).
+They document the supported hBN/TMD model families, current limits and validation.
+
 See the [`Examples/`](Examples) directory for worked examples, and
 [`info.md`](info.md) for the minimum steps needed to get started.
 

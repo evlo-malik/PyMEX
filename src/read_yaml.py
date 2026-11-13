@@ -3,6 +3,7 @@
 import os, sys
 import yaml
 import numpy as np
+from python_tb_config import uses_python_model
 from datetime import datetime
 from functools import partial
 from mpi4py import MPI
@@ -179,6 +180,8 @@ def check_wannier_io(bse):
   """
   Check if the wannier90 input/output files are specified correctly.
   """
+  if uses_python_model({"bse": bse}):
+    return
   valid_wannier = {'wannier90'}
   if bse["wannier_io"] is None:
     print_f("ERROR: 'wannier_io' must be specified.")
@@ -231,7 +234,7 @@ def check_bse(bse):
       if bse["tb"]["bands"] is None:
         print_f("ERROR: 'bands' must be specified for tb bse method.")
         comm.Abort(1)
-      valid_tb_engine = {'wannier90'}
+      valid_tb_engine = {'python'} if uses_python_model({"bse": bse}) else {'wannier90'}
       if bse["tb"]["bands"]["engine"] not in valid_tb_engine: 
         print_f(f'ERROR: Invalid engine {bse["tb"]["bands"]["engine"]}. Must be one of: {valid_tb_engine}')
         comm.Abort(1)
