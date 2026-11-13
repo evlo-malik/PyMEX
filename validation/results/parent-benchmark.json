@@ -1,0 +1,213 @@
+{
+  "actual_runs": 4,
+  "all_passed": true,
+  "baseline_commit": "67165cc",
+  "only_changed_source": "bse.py",
+  "production_sources_unchanged": true,
+  "baseline_source_hashes": {
+    "addsoc.py": "4d925405c32640b8a0dba6bd2c2cb0584799276b5c2d38459757010a558617c5",
+    "archer2_setup.py": "ec3af44ba0bc695fc798ca710709a15d037c768115b2bba58cebd527438c94cb",
+    "bse.py": "fb71c159560db7c21712300a2b5ac7b1323c58e921b3e416e2e21a2dcb73b647",
+    "calc_Ham.py": "711eb5ef207904f704a4fbbd60b7e10d995b1a8220858823592d9d173c97e368",
+    "constants.py": "4be9e4a4c02c844ca222af447fa04751c9fdc6b79110c99e5c1473315c397303",
+    "dft2bse.py": "ffbdc37fbf61ecdd855baf9d772f63ceaffaca84044cc3265926ba3d2bd61be8",
+    "generic_func.py": "7769b90726bfb1357d140ee82d93a308ec051bc387642e2e9b57ed25de9aee0f",
+    "potential.py": "1e1ca3b9b5c07af92e0b3b73824cf157a83b0ea078978006c8f1ea01fbf4de52",
+    "python_tb.py": "2d29af0cf5fac6bc3e92daf2071e2069d32746580f0f6ecdfdb1609ad2204734",
+    "python_tb_config.py": "b20108aea0fdf716e6301f397cf0988fca706ea0bd3fbd1a320e7c1f3a895c09",
+    "read_yaml.py": "120a839fd108ea1d5146ced3342fc7c402bbf97c07679da7c349867b20af2e08",
+    "setup.py": "209936754cf759fdd03926fd73fe0b6207eae2f0ab055f7b8bee626532e353bf",
+    "wan90tobse.py": "927a26435d1b7b70b9d1e3c06fe82a31c7d530c29cb676859eb35297935c3175",
+    "write_pmu_file.py": "8c42f2b18300a76f57746a924ea67a627bfeb0621c4819743462305cb17514d4"
+  },
+  "optimized_source_hashes": {
+    "addsoc.py": "4d925405c32640b8a0dba6bd2c2cb0584799276b5c2d38459757010a558617c5",
+    "archer2_setup.py": "ec3af44ba0bc695fc798ca710709a15d037c768115b2bba58cebd527438c94cb",
+    "bse.py": "696dc59c8ff1676716ebb203d8ffe26f44d3560ed602d8945a20787f11d4cd73",
+    "calc_Ham.py": "711eb5ef207904f704a4fbbd60b7e10d995b1a8220858823592d9d173c97e368",
+    "constants.py": "4be9e4a4c02c844ca222af447fa04751c9fdc6b79110c99e5c1473315c397303",
+    "dft2bse.py": "ffbdc37fbf61ecdd855baf9d772f63ceaffaca84044cc3265926ba3d2bd61be8",
+    "generic_func.py": "7769b90726bfb1357d140ee82d93a308ec051bc387642e2e9b57ed25de9aee0f",
+    "potential.py": "1e1ca3b9b5c07af92e0b3b73824cf157a83b0ea078978006c8f1ea01fbf4de52",
+    "python_tb.py": "2d29af0cf5fac6bc3e92daf2071e2069d32746580f0f6ecdfdb1609ad2204734",
+    "python_tb_config.py": "b20108aea0fdf716e6301f397cf0988fca706ea0bd3fbd1a320e7c1f3a895c09",
+    "read_yaml.py": "120a839fd108ea1d5146ced3342fc7c402bbf97c07679da7c349867b20af2e08",
+    "setup.py": "209936754cf759fdd03926fd73fe0b6207eae2f0ab055f7b8bee626532e353bf",
+    "wan90tobse.py": "927a26435d1b7b70b9d1e3c06fe82a31c7d530c29cb676859eb35297935c3175",
+    "write_pmu_file.py": "8c42f2b18300a76f57746a924ea67a627bfeb0621c4819743462305cb17514d4"
+  },
+  "results": [
+    {
+      "case": "hBN-independent-N030-p1-parent-baseline",
+      "reference": "mac-archive/optical/results/independent/runs/N030",
+      "material": "hBN",
+      "mode": "independent",
+      "mesh": 30,
+      "ranks": 1,
+      "unoptimized_baseline": true,
+      "timings": {
+        "setup_s": 0.2634616829454899,
+        "matrix_s": 30.214667012915015,
+        "diagonalization_s": 0.19414028665050864,
+        "optical_s": 0.8266513012349606
+      },
+      "input_hashes": {
+        "pymex_tb.yaml": "41b15e2135da839143c6a3ccc5a0c96f454a4180a12c9c7a184a8e734e6e29b1",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b"
+      },
+      "native_output_hashes": {
+        "sigma_unpolarized_tb.txt": "4ae0dde923f113cda71be0b7af4df8ec4634ba02167efb7bd4dfdd7236d9d4d8",
+        "Conductivity_exciton_tb.hdf5": "26e20a5f4d6ab736d6ade4d5ff195def275f4f814304635f4b1e2db6dd22ae25",
+        "Eigvec_exciton_tb.hdf5": "a3e47e0193d1aa6534d179b80490ab6186b3535d4d6f6e9bde5f71e9f3bc4f03",
+        "Eigval_exciton_tb.hdf5": "f242956d7e3b9e7111a8459416e10d05fb6989e50dd8cc530cae20c9aac7d350",
+        "H_exciton_tb.hdf5": "eb3b1c66d312f7126425f6d162bf3fe282c4edfbcab826690407a3db09bf5f0e",
+        "Weight_Rvec.txt": "56e14d618c8ac8f3b0dbae33873d043e5e43afdbdf56c8c92acf938de52a585a",
+        "Rvec.txt": "61b50232c01726fb9a9ccfbf97a4e6d31bc18c4515525342591afdd438c21293",
+        "Grad_H_k_tb.hdf5": "a7fe616c0e72c66d8e831419046aa4ae3817ae6d088f5ea5f39f44668adac477",
+        "H_k_tb.hdf5": "114e5e9d2f7c833f77b6782b45cbbb2fe01aea1eee7b2bd61c70b4cf6d545bf6",
+        "Eigvec_k_tb.hdf5": "6f22ba62e193520dff22f20af2df769d1f8ad0c5743e39f3b2f4f084a89cce4d",
+        "Eigval_k_tb.hdf5": "8d8508ee893e4dc7aabb807445611afbefedd4c9145e6c16be264d1c1c27cf0b"
+      },
+      "passed": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 5.329070518200751e-15,
+        "Eigval_exciton_tb.hdf5/Q0": 3.552713678800501e-15,
+        "Eigvec_exciton_tb.hdf5/Q0": 1.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 11.263942707787473,
+        "H_k_tb.hdf5/TB_Hamiltonian": 3.318735928928622e-15,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 3.070725159912542e-10,
+        "native_TXT_max_absolute_difference": 5.389210855355486e-08,
+        "native_TXT_max_relative_to_peak": 1.9839679587911747e-12
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1-parent-optimized",
+      "reference": "hBN-independent-N030-p1-parent-baseline",
+      "material": "hBN",
+      "mode": "independent",
+      "mesh": 30,
+      "ranks": 1,
+      "unoptimized_baseline": false,
+      "timings": {
+        "setup_s": 0.26265709614381194,
+        "matrix_s": 0.10285089025273919,
+        "diagonalization_s": 0.19351384602487087,
+        "optical_s": 0.83164784591645
+      },
+      "input_hashes": {
+        "pymex_tb.yaml": "41b15e2135da839143c6a3ccc5a0c96f454a4180a12c9c7a184a8e734e6e29b1",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b"
+      },
+      "native_output_hashes": {
+        "sigma_unpolarized_tb.txt": "4ae0dde923f113cda71be0b7af4df8ec4634ba02167efb7bd4dfdd7236d9d4d8",
+        "Conductivity_exciton_tb.hdf5": "26e20a5f4d6ab736d6ade4d5ff195def275f4f814304635f4b1e2db6dd22ae25",
+        "Eigvec_exciton_tb.hdf5": "a3e47e0193d1aa6534d179b80490ab6186b3535d4d6f6e9bde5f71e9f3bc4f03",
+        "Eigval_exciton_tb.hdf5": "f242956d7e3b9e7111a8459416e10d05fb6989e50dd8cc530cae20c9aac7d350",
+        "H_exciton_tb.hdf5": "eb3b1c66d312f7126425f6d162bf3fe282c4edfbcab826690407a3db09bf5f0e",
+        "Weight_Rvec.txt": "56e14d618c8ac8f3b0dbae33873d043e5e43afdbdf56c8c92acf938de52a585a",
+        "Rvec.txt": "61b50232c01726fb9a9ccfbf97a4e6d31bc18c4515525342591afdd438c21293",
+        "Grad_H_k_tb.hdf5": "a7fe616c0e72c66d8e831419046aa4ae3817ae6d088f5ea5f39f44668adac477",
+        "H_k_tb.hdf5": "114e5e9d2f7c833f77b6782b45cbbb2fe01aea1eee7b2bd61c70b4cf6d545bf6",
+        "Eigvec_k_tb.hdf5": "6f22ba62e193520dff22f20af2df769d1f8ad0c5743e39f3b2f4f084a89cce4d",
+        "Eigval_k_tb.hdf5": "8d8508ee893e4dc7aabb807445611afbefedd4c9145e6c16be264d1c1c27cf0b"
+      },
+      "passed": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "native_TXT_max_absolute_difference": 0.0,
+        "native_TXT_max_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-parent-baseline",
+      "reference": "tmds/MoS2/independent/code/tmds/optical/results/independent/runs/N030",
+      "material": "MoS2",
+      "mode": "independent",
+      "mesh": 30,
+      "ranks": 1,
+      "unoptimized_baseline": true,
+      "timings": {
+        "setup_s": 0.3614993551746011,
+        "matrix_s": 83.68608987517655,
+        "diagonalization_s": 1.2847773269750178,
+        "optical_s": 2.3726760679855943
+      },
+      "input_hashes": {
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff"
+      },
+      "native_output_hashes": {
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Weight_Rvec.txt": "56e14d618c8ac8f3b0dbae33873d043e5e43afdbdf56c8c92acf938de52a585a",
+        "Rvec.txt": "8dcfeb50108295da013bbcca7d0366e5bf203ddf364007a00b9d802ccc92f8b9",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Eigvec_k_tb.hdf5": "30310612c6be851626aaa758a74824b921ecf42951811301d5efc0777360ce3b",
+        "Eigval_k_tb.hdf5": "fc4da390f06518953a444e2d0f4a60dd5836d2b762d6f3d14a54c3c619e6ffda"
+      },
+      "passed": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "native_TXT_max_absolute_difference": 0.0,
+        "native_TXT_max_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-parent-optimized",
+      "reference": "MoS2-independent-N030-p1-parent-baseline",
+      "material": "MoS2",
+      "mode": "independent",
+      "mesh": 30,
+      "ranks": 1,
+      "unoptimized_baseline": false,
+      "timings": {
+        "setup_s": 0.36736496072262526,
+        "matrix_s": 0.2880607140250504,
+        "diagonalization_s": 1.2894124588929117,
+        "optical_s": 2.371607783716172
+      },
+      "input_hashes": {
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff"
+      },
+      "native_output_hashes": {
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Weight_Rvec.txt": "56e14d618c8ac8f3b0dbae33873d043e5e43afdbdf56c8c92acf938de52a585a",
+        "Rvec.txt": "8dcfeb50108295da013bbcca7d0366e5bf203ddf364007a00b9d802ccc92f8b9",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Eigvec_k_tb.hdf5": "30310612c6be851626aaa758a74824b921ecf42951811301d5efc0777360ce3b",
+        "Eigval_k_tb.hdf5": "fc4da390f06518953a444e2d0f4a60dd5836d2b762d6f3d14a54c3c619e6ffda"
+      },
+      "passed": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "native_TXT_max_absolute_difference": 0.0,
+        "native_TXT_max_relative_to_peak": 0.0
+      }
+    }
+  ]
+}

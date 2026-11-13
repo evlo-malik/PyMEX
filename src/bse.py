@@ -2160,14 +2160,23 @@ class BSE(object):
         mywanfuncs = self.wanfuncs.astype(int)
 
         local_data = {}
+        include = self.config.get("eh_interaction", {}).get("include", {})
+        independent = not include.get("direct", False) and not include.get("exchange", False)
         for c, v, k in assigned:
-          local_data[(c, v, k)] = H_optfull_thread(
-            self.C_nc_kplusQ[iQ], self.C_nv_k,
-            self.E_ckplusQ[iQ], self.E_vk,
-            c, v, k,
-            mywanfuncs, self.Rvec, self.weight_Rvec, self.kvec, myQ,
-            self.V_r_keld, self.V_r_coul
-          )
+          if independent:
+            # Exact zero-interaction limit in the same (c, v, k) basis/order.
+            # Keep native MPI gathering, HDF5 layout, full diagonalization and optics.
+            row = np.zeros((num_c, num_v, num_k), dtype=np.complex128)
+            row[c, v, k] = self.E_ckplusQ[iQ, c, k] - self.E_vk[v, k]
+            local_data[(c, v, k)] = row
+          else:
+            local_data[(c, v, k)] = H_optfull_thread(
+              self.C_nc_kplusQ[iQ], self.C_nv_k,
+              self.E_ckplusQ[iQ], self.E_vk,
+              c, v, k,
+              mywanfuncs, self.Rvec, self.weight_Rvec, self.kvec, myQ,
+              self.V_r_keld, self.V_r_coul
+            )
           if rank == root:
             counter = counter + 1
             print_f(f"Root Computed [{counter}/{plist[1]-plist[0]}]")

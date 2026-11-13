@@ -1,0 +1,23 @@
+{
+  "validation_date": "2026-11-13",
+  "repository": "https://github.com/evlo-malik/PyMEX",
+  "branch": "independent-diagonal-validation",
+  "upstream_commit": "23939d5de4aecc05e805af519fd2b07058e311b5",
+  "baseline_commit": "67165cc63e719f75a1e5cc62e0ab04b9af959a8e",
+  "optimized_bse_sha256": "696dc59c8ff1676716ebb203d8ffe26f44d3560ed602d8945a20787f11d4cd73",
+  "native_kernel_source_sha256": "b504574621a943ddcbe5309d30a381f1f4eeb00c490f8612b548706a5b6e0dcf",
+  "native_compiled_extension": {
+    "filename": "cyfunc.cpython-313-x86_64-linux-gnu.so",
+    "sha256": "af5eda59e68c5af3f370c6e5e2a50f3900cd357b95bfec770e3efa32d92953bb"
+  },
+  "local_and_remote_experimental_sources_match": true,
+  "local_and_remote_production_sources_match_prior_inventory": true,
+  "published_scripts_match_executed_scripts": true,
+  "actual_native_runs": 46,
+  "production_adoption": "pending",
+  "reports": {
+    "audit.json": "015718f79f605e1c118d6d06603173684186a85825ef1694483fd30351f0851d",
+    "parent-benchmark.json": "aa57878cd315c76aef641b379c57397622ca3f4b12790676c0ce729916f7fa3f",
+    "independent-shortcut-summary.json": "85f07dc5734bb297ce968f2bbc572948385c763291e0fafa1d54b80caa5d4bbd"
+  }
+}

@@ -1,0 +1,1651 @@
+{
+  "audited_native_runs": 46,
+  "all_passed": true,
+  "acceptance": {
+    "same_platform": "exact elementwise agreement",
+    "cross_platform_absolute_or_peak_relative": 1e-09,
+    "degeneracy_group_tolerance_eV": 1e-10
+  },
+  "production_source_hashes": {
+    "generic_func.py": "17595750b883a93068f1b28da6c91f56c82d9c81db52b22b7a402cdf2f3a4a08",
+    "python_tb_config.py": "b20108aea0fdf716e6301f397cf0988fca706ea0bd3fbd1a320e7c1f3a895c09",
+    "python_tb.py": "2d29af0cf5fac6bc3e92daf2071e2069d32746580f0f6ecdfdb1609ad2204734",
+    "constants.py": "4be9e4a4c02c844ca222af447fa04751c9fdc6b79110c99e5c1473315c397303",
+    "addsoc.py": "4d925405c32640b8a0dba6bd2c2cb0584799276b5c2d38459757010a558617c5",
+    "write_pmu_file.py": "8c42f2b18300a76f57746a924ea67a627bfeb0621c4819743462305cb17514d4",
+    "setup.py": "209936754cf759fdd03926fd73fe0b6207eae2f0ab055f7b8bee626532e353bf",
+    "wan90tobse.py": "927a26435d1b7b70b9d1e3c06fe82a31c7d530c29cb676859eb35297935c3175",
+    "potential.py": "1e1ca3b9b5c07af92e0b3b73824cf157a83b0ea078978006c8f1ea01fbf4de52",
+    "archer2_setup.py": "ec3af44ba0bc695fc798ca710709a15d037c768115b2bba58cebd527438c94cb",
+    "read_yaml.py": "120a839fd108ea1d5146ced3342fc7c402bbf97c07679da7c349867b20af2e08",
+    "dft2bse.py": "ffbdc37fbf61ecdd855baf9d772f63ceaffaca84044cc3265926ba3d2bd61be8",
+    "bse.py": "c0e75d764c2b9d87198c95d288da03190e7ccf6be0223f15556e279f5d594c5a",
+    "calc_Ham.py": "711eb5ef207904f704a4fbbd60b7e10d995b1a8220858823592d9d173c97e368"
+  },
+  "production_sources_unchanged": true,
+  "optimized_source_hashes": {
+    "addsoc.py": "4d925405c32640b8a0dba6bd2c2cb0584799276b5c2d38459757010a558617c5",
+    "archer2_setup.py": "ec3af44ba0bc695fc798ca710709a15d037c768115b2bba58cebd527438c94cb",
+    "bse.py": "696dc59c8ff1676716ebb203d8ffe26f44d3560ed602d8945a20787f11d4cd73",
+    "calc_Ham.py": "711eb5ef207904f704a4fbbd60b7e10d995b1a8220858823592d9d173c97e368",
+    "constants.py": "4be9e4a4c02c844ca222af447fa04751c9fdc6b79110c99e5c1473315c397303",
+    "dft2bse.py": "ffbdc37fbf61ecdd855baf9d772f63ceaffaca84044cc3265926ba3d2bd61be8",
+    "generic_func.py": "7769b90726bfb1357d140ee82d93a308ec051bc387642e2e9b57ed25de9aee0f",
+    "potential.py": "1e1ca3b9b5c07af92e0b3b73824cf157a83b0ea078978006c8f1ea01fbf4de52",
+    "python_tb.py": "2d29af0cf5fac6bc3e92daf2071e2069d32746580f0f6ecdfdb1609ad2204734",
+    "python_tb_config.py": "b20108aea0fdf716e6301f397cf0988fca706ea0bd3fbd1a320e7c1f3a895c09",
+    "read_yaml.py": "120a839fd108ea1d5146ced3342fc7c402bbf97c07679da7c349867b20af2e08",
+    "setup.py": "209936754cf759fdd03926fd73fe0b6207eae2f0ab055f7b8bee626532e353bf",
+    "wan90tobse.py": "927a26435d1b7b70b9d1e3c06fe82a31c7d530c29cb676859eb35297935c3175",
+    "write_pmu_file.py": "8c42f2b18300a76f57746a924ea67a627bfeb0621c4819743462305cb17514d4"
+  },
+  "native_extension": {
+    "filename": "cyfunc.cpython-313-x86_64-linux-gnu.so",
+    "sha256": "af5eda59e68c5af3f370c6e5e2a50f3900cd357b95bfec770e3efa32d92953bb"
+  },
+  "environment": {
+    "python": "3.13.18",
+    "system": "Linux",
+    "architecture": "x86_64",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "hdf5": "2.0.0",
+    "yaml": "6.0.3",
+    "mpi": "MPICH Version:      5.0.2"
+  },
+  "script_hashes": {
+    "driver.py": "6011986fb2c5153761ccf12f37c06bf741d43e06a2b02962b21b8d73aaa47fb3",
+    "test_independent_shortcut.py": "a29bdeb5640c10b21c7b3ddca0bfc25c87b70f6bb62e3bfbc0a36f9b81311612",
+    "benchmark_parent.py": "6ca0389f3516e3da6140df4900ee2727b32d835ab5ce84ea534f668980d2eed7",
+    "audit_completed_runs.py": "32a5e14a0a1b4e0bc3e68a730256c5b04554149a85717a5d3d06fd6a21e1b8f6"
+  },
+  "mpi_pairs_with_identical_output_hashes": [
+    [
+      "hBN-independent-N006-p1",
+      "hBN-independent-N006-p4"
+    ],
+    [
+      "hBN-independent-N009-p1",
+      "hBN-independent-N009-p4"
+    ],
+    [
+      "MoS2-independent-N006-p1",
+      "MoS2-independent-N006-p4"
+    ],
+    [
+      "MoS2-independent-N009-p1",
+      "MoS2-independent-N009-p4"
+    ],
+    [
+      "MoSe2-independent-N006-p1",
+      "MoSe2-independent-N006-p4"
+    ],
+    [
+      "MoSe2-independent-N009-p1",
+      "MoSe2-independent-N009-p4"
+    ],
+    [
+      "WS2-independent-N006-p1",
+      "WS2-independent-N006-p4"
+    ],
+    [
+      "WS2-independent-N009-p1",
+      "WS2-independent-N009-p4"
+    ],
+    [
+      "WSe2-independent-N006-p1",
+      "WSe2-independent-N006-p4"
+    ],
+    [
+      "WSe2-independent-N009-p1",
+      "WSe2-independent-N009-p4"
+    ],
+    [
+      "hBN-direct-N009-p1",
+      "hBN-direct-N009-p4"
+    ],
+    [
+      "hBN-direct-exchange-N009-p1",
+      "hBN-direct-exchange-N009-p4"
+    ],
+    [
+      "MoS2-direct-N009-p1",
+      "MoS2-direct-N009-p4"
+    ],
+    [
+      "MoS2-direct-exchange-N009-p1",
+      "MoS2-direct-exchange-N009-p4"
+    ]
+  ],
+  "results": [
+    {
+      "case": "hBN-independent-N006-p1",
+      "passed": true,
+      "full_state_count": 36,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "cb0ba328a180d73939e502dee1244ad39c3940b03e928b8206720c907349df13",
+        "Eigval_exciton_tb.hdf5": "f7fad1d82a950144e8de0ee42c8593c936d9f5a43ea36b36cd2d1ac67af267ea",
+        "Eigvec_exciton_tb.hdf5": "4a28d2293fc95c327575ce978f56aab0dde014344c1c8479134ad3013f49f488",
+        "Conductivity_exciton_tb.hdf5": "a59e7ef59af7a5fcd01d159532096a49d79931efb30540a7f3f860b21c1d1210",
+        "H_k_tb.hdf5": "b25e57c7bfff01f8fa00d877c3d44b471249ed271dd14e398bde156abb1cfaf5",
+        "Grad_H_k_tb.hdf5": "60387ab8b815999d8848166f78232fc3431ec79003db167227caeb7775da9b08",
+        "pymex_tb.yaml": "920da4f311723e58959150f4986d5623ede4fb7f2b414969c0149add7ec6b018",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "46e70ad619a229bef435aa92962cff3b8b90f3e6239bf50865fb140292297e8d"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N006-p4",
+      "passed": true,
+      "full_state_count": 36,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "cb0ba328a180d73939e502dee1244ad39c3940b03e928b8206720c907349df13",
+        "Eigval_exciton_tb.hdf5": "f7fad1d82a950144e8de0ee42c8593c936d9f5a43ea36b36cd2d1ac67af267ea",
+        "Eigvec_exciton_tb.hdf5": "4a28d2293fc95c327575ce978f56aab0dde014344c1c8479134ad3013f49f488",
+        "Conductivity_exciton_tb.hdf5": "a59e7ef59af7a5fcd01d159532096a49d79931efb30540a7f3f860b21c1d1210",
+        "H_k_tb.hdf5": "b25e57c7bfff01f8fa00d877c3d44b471249ed271dd14e398bde156abb1cfaf5",
+        "Grad_H_k_tb.hdf5": "60387ab8b815999d8848166f78232fc3431ec79003db167227caeb7775da9b08",
+        "pymex_tb.yaml": "920da4f311723e58959150f4986d5623ede4fb7f2b414969c0149add7ec6b018",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "46e70ad619a229bef435aa92962cff3b8b90f3e6239bf50865fb140292297e8d"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N009-p1",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7d2fd5a3f5906ad601055768b21d82984c965139d9cc2c1c16e00a2a8cd86759",
+        "Eigval_exciton_tb.hdf5": "b1bd9079664282a8e69dd57771bbcae16786d16fbb692c20a1d715cb60f2a521",
+        "Eigvec_exciton_tb.hdf5": "2079cff1360ec48c8a83c9a1a1d5b336efdc7190e63d586785f5a6d601b7a003",
+        "Conductivity_exciton_tb.hdf5": "266aba193f8e4dc105d60ced3cf8daa1eadefae3302407068c59ce5184a89bf1",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "0c59542c54c9b9f38508e2e0beede4aa7ce1a255098d1b4c87be14bdf5b0c1dc",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "5a4b8bda2a1d6947a0957200ba71e9a831f2afc9eda58ab3708c600c3747e142"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N009-p4",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7d2fd5a3f5906ad601055768b21d82984c965139d9cc2c1c16e00a2a8cd86759",
+        "Eigval_exciton_tb.hdf5": "b1bd9079664282a8e69dd57771bbcae16786d16fbb692c20a1d715cb60f2a521",
+        "Eigvec_exciton_tb.hdf5": "2079cff1360ec48c8a83c9a1a1d5b336efdc7190e63d586785f5a6d601b7a003",
+        "Conductivity_exciton_tb.hdf5": "266aba193f8e4dc105d60ced3cf8daa1eadefae3302407068c59ce5184a89bf1",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "0c59542c54c9b9f38508e2e0beede4aa7ce1a255098d1b4c87be14bdf5b0c1dc",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "5a4b8bda2a1d6947a0957200ba71e9a831f2afc9eda58ab3708c600c3747e142"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1",
+      "passed": true,
+      "full_state_count": 900,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "fb715012d43759ebc833e180fdf8149832b8789db0241f4c8ecc8a598aa0339f",
+        "Eigval_exciton_tb.hdf5": "3fa0e91dfd3381e2e054c4f3543ea2f05b51bc86a0c5e84c043af604d2f07df2",
+        "Eigvec_exciton_tb.hdf5": "febfb3d768084aa72d71cb2d76a7829becabe2464e5ad1526d1a7f2160839ccf",
+        "Conductivity_exciton_tb.hdf5": "b9a5c2af4e686c5fa85bf95ddbe1d84270bc46df44a46d7fb5e5ae0aed86b91b",
+        "H_k_tb.hdf5": "405abb64ea7892a5f951777f0caf157476065d0251413c470626748f596a86f2",
+        "Grad_H_k_tb.hdf5": "9375a30b89c213707b1bf6bfc4ad1a3f9322545f298fd30505aa9c30d7461bf2",
+        "pymex_tb.yaml": "d0862931e4922170dcfe324cb1de64aa2b58fd9e7a652ada5ba6f2bb6f2ccf2b",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "699a9e3ac496f442a260011e46831e22432e9d56ba0e61ba5cb4b81059152101"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 5.329070518200751e-15,
+        "Eigval_exciton_tb.hdf5/Q0": 3.552713678800501e-15,
+        "Eigvec_exciton_tb.hdf5/Q0": 1.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 11.263942707787473,
+        "H_k_tb.hdf5/TB_Hamiltonian": 3.318735928928622e-15,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 3.070725159912542e-10,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 1.9839679587911747e-12
+      },
+      "degeneracy_diagnostics": {
+        "analysis_only": true,
+        "energy_group_tolerance_eV": 1e-10,
+        "groups": 81,
+        "largest_group": 87,
+        "eigenpair_residual_norm_eV": [
+          0.0,
+          0.0
+        ],
+        "subspace_projection_error": 0.0,
+        "within_group_orthogonality_error": 0.0,
+        "grouped_optical_strength_max_absolute_difference": 3.3772380447771866e-09,
+        "grouped_optical_strength_max_difference_relative_to_peak": 1.9818223773433707e-12
+      }
+    },
+    {
+      "case": "hBN-independent-N048-p1",
+      "passed": true,
+      "full_state_count": 2304,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "5d36ce83f8174adfc774a5ced065fb3cddd3043d501052641f4813fd14d88478",
+        "Eigval_exciton_tb.hdf5": "6daad07f473e8e9492e2c647e77a209573c48bd401df588f51b2778c48bb19a8",
+        "Eigvec_exciton_tb.hdf5": "5fe27788838aadbf576f11b39a5c477f12731c9507ad04b4ba26a365d62cfb50",
+        "Conductivity_exciton_tb.hdf5": "c1c0509c289386d693f0d657022fd8ccc66b632a78bc808b5cd13ac868ed1416",
+        "H_k_tb.hdf5": "5c436341bc9cd428d6c4e7fdc6ecd218aaefe468e7823192f48a120fa3c4b58e",
+        "Grad_H_k_tb.hdf5": "112036ac620159abce5b94e0ffc4a41754aaffb40c356712e7c224713a5fea72",
+        "pymex_tb.yaml": "0e3d5f023e52a1e837e202e832aa1e4d7c33679971e392c8a1d02364152fab36",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "b0998cd0112a44e84885f3b5f2d3c70e163c0fe058d09813566036a0e12bd9a5"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 7.105427357601002e-15,
+        "Eigval_exciton_tb.hdf5/Q0": 3.552713678800501e-15,
+        "Eigvec_exciton_tb.hdf5/Q0": 1.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 11.414193340387136,
+        "H_k_tb.hdf5/TB_Hamiltonian": 3.084742237080508e-15,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 3.8487742907251283e-10,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 3.945870391949755e-12
+      },
+      "degeneracy_diagnostics": {
+        "analysis_only": true,
+        "energy_group_tolerance_eV": 1e-10,
+        "groups": 202,
+        "largest_group": 141,
+        "eigenpair_residual_norm_eV": [
+          0.0,
+          0.0
+        ],
+        "subspace_projection_error": 0.0,
+        "within_group_orthogonality_error": 0.0,
+        "grouped_optical_strength_max_absolute_difference": 1.1045358405681327e-08,
+        "grouped_optical_strength_max_difference_relative_to_peak": 3.992904276565244e-12
+      }
+    },
+    {
+      "case": "MoS2-independent-N006-p1",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "58dd891b028a3d1e05bf6b7defaf3aaac7f493194e3072a44efdbbe61d8d2f07",
+        "Eigval_exciton_tb.hdf5": "aa8c42258fb676fce566a64a96966ce9679b9c4a62936b064bf33cd7724847c8",
+        "Eigvec_exciton_tb.hdf5": "3ea400a078d6e994236b5fe200793497d1589fea893e4b642f01ee916c65877e",
+        "Conductivity_exciton_tb.hdf5": "910b2d48fbaf147d9f16fbfc91eb4ba0c1fb6c8fe793ad20ffd65b1720114b67",
+        "H_k_tb.hdf5": "dd3be66f6c8032386bba84679dee270dba5139ffd799e1f03c835860c3def7be",
+        "Grad_H_k_tb.hdf5": "9aea591311d410f8828987ad445211f97323919d7771b4cb3591d481c713da33",
+        "pymex_tb.yaml": "975d7564133f247918e4cecdaedb3b448f5f44bbdaf81ccfa8ac2a3484e2e3b9",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "d7b31012eb97f1de5af0dea7012bb7a7895ef633661d26d6966136fbe8910d39"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N006-p4",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "58dd891b028a3d1e05bf6b7defaf3aaac7f493194e3072a44efdbbe61d8d2f07",
+        "Eigval_exciton_tb.hdf5": "aa8c42258fb676fce566a64a96966ce9679b9c4a62936b064bf33cd7724847c8",
+        "Eigvec_exciton_tb.hdf5": "3ea400a078d6e994236b5fe200793497d1589fea893e4b642f01ee916c65877e",
+        "Conductivity_exciton_tb.hdf5": "910b2d48fbaf147d9f16fbfc91eb4ba0c1fb6c8fe793ad20ffd65b1720114b67",
+        "H_k_tb.hdf5": "dd3be66f6c8032386bba84679dee270dba5139ffd799e1f03c835860c3def7be",
+        "Grad_H_k_tb.hdf5": "9aea591311d410f8828987ad445211f97323919d7771b4cb3591d481c713da33",
+        "pymex_tb.yaml": "975d7564133f247918e4cecdaedb3b448f5f44bbdaf81ccfa8ac2a3484e2e3b9",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "d7b31012eb97f1de5af0dea7012bb7a7895ef633661d26d6966136fbe8910d39"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "9e59ab633e5579f4e7458247704bfcdfbe1098986115b179a32e173fc0ab59bc",
+        "Eigval_exciton_tb.hdf5": "dd351d2009a3a7f6eac2dcd8585a5828fe95d1c4f28220e0bfb89533b3024721",
+        "Eigvec_exciton_tb.hdf5": "f66bbc380a99512d40669a026f389a351ed447be13b3794f533394634ca45e7d",
+        "Conductivity_exciton_tb.hdf5": "400c8855fd6e3c9d2eecdc61a19fda1d8516f68c1fd600d97bab2f7165ddc6a3",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "2e761b528008ed6db8674715d35228d76aaaf1ce5beac4a31e423dab5251b8f1",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "af22213a522f8a1d9ad5df51bc860b89a69a7fe3a82252c158aca594f47d58bb"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "9e59ab633e5579f4e7458247704bfcdfbe1098986115b179a32e173fc0ab59bc",
+        "Eigval_exciton_tb.hdf5": "dd351d2009a3a7f6eac2dcd8585a5828fe95d1c4f28220e0bfb89533b3024721",
+        "Eigvec_exciton_tb.hdf5": "f66bbc380a99512d40669a026f389a351ed447be13b3794f533394634ca45e7d",
+        "Conductivity_exciton_tb.hdf5": "400c8855fd6e3c9d2eecdc61a19fda1d8516f68c1fd600d97bab2f7165ddc6a3",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "2e761b528008ed6db8674715d35228d76aaaf1ce5beac4a31e423dab5251b8f1",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "af22213a522f8a1d9ad5df51bc860b89a69a7fe3a82252c158aca594f47d58bb"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N048-p1",
+      "passed": true,
+      "full_state_count": 4608,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "702549b8facd7365c1ae7d8980ac8eb9794879aaab2d785c1bc0e100eaf248f3",
+        "Eigval_exciton_tb.hdf5": "c38ac0ffa17e812b6b122e8a99112d125d8bcdc1aab46029c9ac77ce3652b69d",
+        "Eigvec_exciton_tb.hdf5": "584cb0dcd4a72e4d4225af95569f9897f4e3a35f64743ec1b5d5e92927038579",
+        "Conductivity_exciton_tb.hdf5": "a480cdb612b447093fddad05288e9c0c54272f7736e6ceee7995737d5024b57d",
+        "H_k_tb.hdf5": "c00e8886d88aff56d761aed242a666efa0cd3be477360ffc2f5199fb0ae01175",
+        "Grad_H_k_tb.hdf5": "a1794c02d21845a243fc695fd97d6b2808b791edb9de9328c4e94198a053301e",
+        "pymex_tb.yaml": "8853d2922f97ffced46a8b9b1ea79e39b850039b0829c45095c16be42be9228e",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "d9361ad957265902c8aacfd6ce641e8d0a51941a07c1b87f455f36d2d3092887"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N006-p1",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "5490f222ef2ceb70691c08cec8854f16c0e24b6b4d012c2ba5fd8ee99c2da284",
+        "Eigval_exciton_tb.hdf5": "17e86920d08a164abaf8ba3ea2c2b78bcb658bd612e1ae31f1133b950d92b67d",
+        "Eigvec_exciton_tb.hdf5": "b44c22cd4411460c828c9e83824ca5b8a1338742f009cc2aa4133c5d4927cf10",
+        "Conductivity_exciton_tb.hdf5": "1e261cf211fcd60ac432f4e1edb57aa47bdec2d1386e7112e5c5bba612483650",
+        "H_k_tb.hdf5": "6f5a3afb77140dd4022ddb72cc6cca63ffed29abf5c1b9ebdf89e12a49e442a5",
+        "Grad_H_k_tb.hdf5": "76dd621cd0d26b4a7e394005b453741559f42349a732cee3db52a1c6903b2828",
+        "pymex_tb.yaml": "9f86cac283ca87097ce1d0ebd3677cbe184f32277b2e783eaa4f126d03ca3375",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "6169c2371effc18f92fbd7b40671d176f4d84f5f4330d262305ca51ba40a698a"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N006-p4",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "5490f222ef2ceb70691c08cec8854f16c0e24b6b4d012c2ba5fd8ee99c2da284",
+        "Eigval_exciton_tb.hdf5": "17e86920d08a164abaf8ba3ea2c2b78bcb658bd612e1ae31f1133b950d92b67d",
+        "Eigvec_exciton_tb.hdf5": "b44c22cd4411460c828c9e83824ca5b8a1338742f009cc2aa4133c5d4927cf10",
+        "Conductivity_exciton_tb.hdf5": "1e261cf211fcd60ac432f4e1edb57aa47bdec2d1386e7112e5c5bba612483650",
+        "H_k_tb.hdf5": "6f5a3afb77140dd4022ddb72cc6cca63ffed29abf5c1b9ebdf89e12a49e442a5",
+        "Grad_H_k_tb.hdf5": "76dd621cd0d26b4a7e394005b453741559f42349a732cee3db52a1c6903b2828",
+        "pymex_tb.yaml": "9f86cac283ca87097ce1d0ebd3677cbe184f32277b2e783eaa4f126d03ca3375",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "6169c2371effc18f92fbd7b40671d176f4d84f5f4330d262305ca51ba40a698a"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "bdf3f979ec4996a32e233cad5218662053ba6673e0de2bd8c8f63f3214260f76",
+        "Eigval_exciton_tb.hdf5": "70c955b836eb50831a3c1e84f479a3f8ded87ed249f8b333ada1ae7dff3610ba",
+        "Eigvec_exciton_tb.hdf5": "ad49b610edb1707c4abb9952c676445b030f2ae5e9fb9b041cb172645ddc23b8",
+        "Conductivity_exciton_tb.hdf5": "f73758a51d26455141eb97e9c0a376579b00a02efdfebb8da923272268c3708e",
+        "H_k_tb.hdf5": "bea76ee9b68e30cadc5832a2e87ad4d2d5df7db49d3145711d3f84290e526db9",
+        "Grad_H_k_tb.hdf5": "2279e7b5fa4669f90989fcae0d80cfd681ebbc2852d8023013df588b56e7beb1",
+        "pymex_tb.yaml": "04fff376a8c0542957c7e1c2ebce63e0caf866f4c31950b6748c00358c8e92be",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "c3c859c9fe1ceee6d750439b7439023381349909db8f39058c7c8d931e5dded0"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "bdf3f979ec4996a32e233cad5218662053ba6673e0de2bd8c8f63f3214260f76",
+        "Eigval_exciton_tb.hdf5": "70c955b836eb50831a3c1e84f479a3f8ded87ed249f8b333ada1ae7dff3610ba",
+        "Eigvec_exciton_tb.hdf5": "ad49b610edb1707c4abb9952c676445b030f2ae5e9fb9b041cb172645ddc23b8",
+        "Conductivity_exciton_tb.hdf5": "f73758a51d26455141eb97e9c0a376579b00a02efdfebb8da923272268c3708e",
+        "H_k_tb.hdf5": "bea76ee9b68e30cadc5832a2e87ad4d2d5df7db49d3145711d3f84290e526db9",
+        "Grad_H_k_tb.hdf5": "2279e7b5fa4669f90989fcae0d80cfd681ebbc2852d8023013df588b56e7beb1",
+        "pymex_tb.yaml": "04fff376a8c0542957c7e1c2ebce63e0caf866f4c31950b6748c00358c8e92be",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "c3c859c9fe1ceee6d750439b7439023381349909db8f39058c7c8d931e5dded0"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N030-p1",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "136ddee72e5cd926be3bfaca653f10d7a2b0ed6ac0b545c368f29160feb2ebef",
+        "Eigval_exciton_tb.hdf5": "4c81de0626c5471d1347e79cb3998b7b9252f2e5382d46e5ef7e9f65c6c32200",
+        "Eigvec_exciton_tb.hdf5": "5ec470afd2fd7e6568bf9c720d472a749ad74566f9ee65c5d34c0e70a6aa3c34",
+        "Conductivity_exciton_tb.hdf5": "de8489bef7befdb542524822328fadd15f581d4a8dc26f5f9b1ce8d5224a8766",
+        "H_k_tb.hdf5": "9280cfc033e2c409f03c497331f9a4f10a380574b39cbaf22c6894ee49fd6841",
+        "Grad_H_k_tb.hdf5": "71201fb206760b1932b22ac3d5b62e8074d3be2c11ebd9df5949b7bf6d0b21a2",
+        "pymex_tb.yaml": "97394971469b146b9da08fe83ca2bfe8bf49b103aafed7d369716ff8eeb20c4c",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "11b17e62c3144adad475be27792d9898aac6eab65e92f035fb2c178be6c8d862"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoSe2-independent-N048-p1",
+      "passed": true,
+      "full_state_count": 4608,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "71b3847f443e17c053cf03a04d2b5de2427b8869e1d4a4a78746d3bab88b559a",
+        "Eigval_exciton_tb.hdf5": "4b58087b5dd3508972f795ffd01495943310e8a20f4f30926edb60cf44826eff",
+        "Eigvec_exciton_tb.hdf5": "682edb2007a610ca9d4e7bcd753b83b25e623384f08c6c43cfb652c610dc4f00",
+        "Conductivity_exciton_tb.hdf5": "fcc306f5a6f36bad7c743560e139dc1919c0088426748153d7f8de355af20a4c",
+        "H_k_tb.hdf5": "6961ebcd01b99da811f1e788fa634e860a54d8b6067309d445b30c231be3b116",
+        "Grad_H_k_tb.hdf5": "108d7e0b3442aa2d02e4082bd4f2a6ec0a9dac7182353e10710cd67a138fbd10",
+        "pymex_tb.yaml": "57f4462ea5e97d576470b2cfa5e929daf93eb1ad33f7d90ef093f3d70db933d6",
+        "model.py": "c35b999f0886e8e34cf3f3c0b1bea5cd067022aa0b6f83b0643cec6b4b99cc96",
+        "sigma_unpolarized_tb.txt": "9458c8a36fbd43a904e82cee006a4a043d7a759d5c07f8b5f7e5873eed826c78"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N006-p1",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7cb36f88eaf0030d6ab63fc03b0464d21452c2f3321efb5ca642b13dd7680eb2",
+        "Eigval_exciton_tb.hdf5": "c861aff3b5ef3deebf240954a2b2577b7e2513d147f57448e4767583cf37c8c3",
+        "Eigvec_exciton_tb.hdf5": "4022b806e0b066f9c87cc72496c24b7ad81a10e0dcc3cdf3f24aecdde94e69ff",
+        "Conductivity_exciton_tb.hdf5": "20b2b50220f872f2189fc95eaa4cfc0e4806189e3bb11ab7d84c0c492f862b48",
+        "H_k_tb.hdf5": "4151127272bfde24881087a931c773083e6bb68e91d9957d73780abebdbd5b8f",
+        "Grad_H_k_tb.hdf5": "6d2665bab891af4e514eaa633a6ac7ff1b7a2b83a40832d0a3ce1bdca9a03c8a",
+        "pymex_tb.yaml": "79562ab99fd7e30cac1763198e707b4e0a8646a52e8ad94a752db96d0eb94ff1",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "1a2910ee7d2b6855f2f9818b22d157a85983eab6ffa5095721ba3c7778149b68"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N006-p4",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7cb36f88eaf0030d6ab63fc03b0464d21452c2f3321efb5ca642b13dd7680eb2",
+        "Eigval_exciton_tb.hdf5": "c861aff3b5ef3deebf240954a2b2577b7e2513d147f57448e4767583cf37c8c3",
+        "Eigvec_exciton_tb.hdf5": "4022b806e0b066f9c87cc72496c24b7ad81a10e0dcc3cdf3f24aecdde94e69ff",
+        "Conductivity_exciton_tb.hdf5": "20b2b50220f872f2189fc95eaa4cfc0e4806189e3bb11ab7d84c0c492f862b48",
+        "H_k_tb.hdf5": "4151127272bfde24881087a931c773083e6bb68e91d9957d73780abebdbd5b8f",
+        "Grad_H_k_tb.hdf5": "6d2665bab891af4e514eaa633a6ac7ff1b7a2b83a40832d0a3ce1bdca9a03c8a",
+        "pymex_tb.yaml": "79562ab99fd7e30cac1763198e707b4e0a8646a52e8ad94a752db96d0eb94ff1",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "1a2910ee7d2b6855f2f9818b22d157a85983eab6ffa5095721ba3c7778149b68"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "f09447b754007275242d9cad69a6beab0efe2c283fd217edd39bc77a93bf68b6",
+        "Eigval_exciton_tb.hdf5": "f1ca1e088a36541c251756b92d02137a54eee22ab4d7a1b014a1d2a104759c7a",
+        "Eigvec_exciton_tb.hdf5": "e888065bb77e90cd5ffbf31c303165385fc55fa2d0a8d5beb8f7eb2276e0e393",
+        "Conductivity_exciton_tb.hdf5": "6da98068d945cfa125557b1f2c6f4f4a98495b58ace8d3313f9e0466b494cc2f",
+        "H_k_tb.hdf5": "b236743b1b560efa70298f63cf12b8bf6f454efb4d6c65e216b7f18f1058371a",
+        "Grad_H_k_tb.hdf5": "3ddd652a9216f0934c8cefe2e913c21782fe0e6c03e0c2acfc2a038781dfa967",
+        "pymex_tb.yaml": "5829ba360c2fe8b1d850cb2e160ab6936cd8095b1ef94bae6dd83a5ff7c2632c",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "f8dda5d628a9e098cabe13a064b8b3316f6ab3238cbf5f2452fbbe158a14a12a"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "f09447b754007275242d9cad69a6beab0efe2c283fd217edd39bc77a93bf68b6",
+        "Eigval_exciton_tb.hdf5": "f1ca1e088a36541c251756b92d02137a54eee22ab4d7a1b014a1d2a104759c7a",
+        "Eigvec_exciton_tb.hdf5": "e888065bb77e90cd5ffbf31c303165385fc55fa2d0a8d5beb8f7eb2276e0e393",
+        "Conductivity_exciton_tb.hdf5": "6da98068d945cfa125557b1f2c6f4f4a98495b58ace8d3313f9e0466b494cc2f",
+        "H_k_tb.hdf5": "b236743b1b560efa70298f63cf12b8bf6f454efb4d6c65e216b7f18f1058371a",
+        "Grad_H_k_tb.hdf5": "3ddd652a9216f0934c8cefe2e913c21782fe0e6c03e0c2acfc2a038781dfa967",
+        "pymex_tb.yaml": "5829ba360c2fe8b1d850cb2e160ab6936cd8095b1ef94bae6dd83a5ff7c2632c",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "f8dda5d628a9e098cabe13a064b8b3316f6ab3238cbf5f2452fbbe158a14a12a"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N030-p1",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "743d9a93a27b04f10cd65dd36efa034da14b205756c29b3cc8a678ce9719db38",
+        "Eigval_exciton_tb.hdf5": "e719ea339bb4bf70aab5580e33533f16060ae9ce1f4860b4b55d1c6468048497",
+        "Eigvec_exciton_tb.hdf5": "5010fb6b387bdebfa8821e649a177d987817bb9fe62dd4805ac84e3933679981",
+        "Conductivity_exciton_tb.hdf5": "eb3de98d8efc201b3c023796bc0d1d5d3376cf243d2f5bf0756d8a4c9a331ffc",
+        "H_k_tb.hdf5": "c1198b68a37119a9f0b9afaeaaa13325610eaea8a40eea93bac2e13294988446",
+        "Grad_H_k_tb.hdf5": "cb0c12a8b7adbc2aaa9cb53632fa8ad8449fa056820aac637e15ee88bc9a953d",
+        "pymex_tb.yaml": "ef8180ceb7d8d11d784cfbac1c402243c612f7e71afc0d57c6d1b50537abaed6",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "295384862a499690f585fdc8cc83b3b4c596bd3a8abc4ef8c0b3f880ca07b768"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WS2-independent-N048-p1",
+      "passed": true,
+      "full_state_count": 4608,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "8d0c8eae5d2d85e1d7072d7377d10e567100a33668deae54acf55c229b4d1824",
+        "Eigval_exciton_tb.hdf5": "da083587ba7fd4ecb0ba4089b88d0deddb1137d369236858ba5079fc2cdf93e7",
+        "Eigvec_exciton_tb.hdf5": "fbed2f8679f3ba805b47d0caa76c9ee8f5dc110b5a3fdc171a6e81d630280b1a",
+        "Conductivity_exciton_tb.hdf5": "7c24238c7e6c43a01a4e05b1a216a3818c85ec820eec4640bb477be9156d9c80",
+        "H_k_tb.hdf5": "13c6becd1baf80655ef68d45b553906dd1bdfb7cb874269acd810042f318d5ef",
+        "Grad_H_k_tb.hdf5": "cc33fe5cc5f212e65887383c8236d0b8e7ceb0d556844bf7ad9d326a8866d721",
+        "pymex_tb.yaml": "e23f1b75e4358bf0cbec57b9cacfe4b86e90101fea45af816f2b36f1c76ffd51",
+        "model.py": "0dc2be39f83fe4cdc77bd4c61607ab8a12daaa38a22e6271a5f57ff623db720a",
+        "sigma_unpolarized_tb.txt": "46f498cfef0a80292f7555039ccb39e28f7f24bed2214dbb14ebb233cade8e60"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N006-p1",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "5aea8a48a22df526f9fc79ab16615e511bf1b79e6ef1c554448b6f339b893922",
+        "Eigval_exciton_tb.hdf5": "f542784b16b8b553ecc66adf70ff00154e2e3afa1d9fe850f8115f2e7cbd4246",
+        "Eigvec_exciton_tb.hdf5": "df2278dafac8937c682ba791717b2e65d3c44c17d65f1d13039feb14a8ec6b62",
+        "Conductivity_exciton_tb.hdf5": "f8c539b02d3d237634c5fdcb3c8be93a53e03703f89b234424c81117d75786a9",
+        "H_k_tb.hdf5": "bffa311a2cdf67e21ed6494ee87cf294f57019b93e2e454e106a32e36b8ec1fa",
+        "Grad_H_k_tb.hdf5": "7b598f1db7b91dae6dc5d4c06d73bd3b1a7e4ad0b0f60ec97b9bc045a00b8370",
+        "pymex_tb.yaml": "ea472afdcbe48d58ca9b9b2c28f18533167fcbd3566c06603d9ae1de1d3ab635",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "52c51b1bac177b704fab859553adaa60658586ffa4156cc5ae2a9207305c5a9d"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N006-p4",
+      "passed": true,
+      "full_state_count": 72,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "5aea8a48a22df526f9fc79ab16615e511bf1b79e6ef1c554448b6f339b893922",
+        "Eigval_exciton_tb.hdf5": "f542784b16b8b553ecc66adf70ff00154e2e3afa1d9fe850f8115f2e7cbd4246",
+        "Eigvec_exciton_tb.hdf5": "df2278dafac8937c682ba791717b2e65d3c44c17d65f1d13039feb14a8ec6b62",
+        "Conductivity_exciton_tb.hdf5": "f8c539b02d3d237634c5fdcb3c8be93a53e03703f89b234424c81117d75786a9",
+        "H_k_tb.hdf5": "bffa311a2cdf67e21ed6494ee87cf294f57019b93e2e454e106a32e36b8ec1fa",
+        "Grad_H_k_tb.hdf5": "7b598f1db7b91dae6dc5d4c06d73bd3b1a7e4ad0b0f60ec97b9bc045a00b8370",
+        "pymex_tb.yaml": "ea472afdcbe48d58ca9b9b2c28f18533167fcbd3566c06603d9ae1de1d3ab635",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "52c51b1bac177b704fab859553adaa60658586ffa4156cc5ae2a9207305c5a9d"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "ba3b6d6b0097d7e1e7f32035c1bc2d7fe3bfe76510fe0cc51f3c30917e95ca0a",
+        "Eigval_exciton_tb.hdf5": "0b15fc4c435c1f692588588c4f9001be3be3387e055a42f4c44d4fb00039cf26",
+        "Eigvec_exciton_tb.hdf5": "82b46417ecb75b00f7285cd65aab411c73c783d5ad44badf40daf78aa5377a97",
+        "Conductivity_exciton_tb.hdf5": "f2c993182b36f2ab13be4cfd8e962982fa070818b27886b0e888ad5e938462f0",
+        "H_k_tb.hdf5": "3fe57776d1b673c373f115559417aa315996cacff86f37511bb3f48ac871a60b",
+        "Grad_H_k_tb.hdf5": "95c77500dab8240bb3a7c1c79e6cc46749d08bd20a5d1ff845ccfa65e7228c80",
+        "pymex_tb.yaml": "c80d16c4902784cc4889d3f0d7fe21ea9d2c828666c80bfca469540ae7046c2e",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "2274fac6a09879783d8c27aabcbe01e5505bd8b711c8260f44dd87ce67f329c4"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "ba3b6d6b0097d7e1e7f32035c1bc2d7fe3bfe76510fe0cc51f3c30917e95ca0a",
+        "Eigval_exciton_tb.hdf5": "0b15fc4c435c1f692588588c4f9001be3be3387e055a42f4c44d4fb00039cf26",
+        "Eigvec_exciton_tb.hdf5": "82b46417ecb75b00f7285cd65aab411c73c783d5ad44badf40daf78aa5377a97",
+        "Conductivity_exciton_tb.hdf5": "f2c993182b36f2ab13be4cfd8e962982fa070818b27886b0e888ad5e938462f0",
+        "H_k_tb.hdf5": "3fe57776d1b673c373f115559417aa315996cacff86f37511bb3f48ac871a60b",
+        "Grad_H_k_tb.hdf5": "95c77500dab8240bb3a7c1c79e6cc46749d08bd20a5d1ff845ccfa65e7228c80",
+        "pymex_tb.yaml": "c80d16c4902784cc4889d3f0d7fe21ea9d2c828666c80bfca469540ae7046c2e",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "2274fac6a09879783d8c27aabcbe01e5505bd8b711c8260f44dd87ce67f329c4"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N030-p1",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "a7d6bf6cffc2ef24ffb0e9351a0997ff47afe6320508e6a9708dab46c5cae55e",
+        "Eigval_exciton_tb.hdf5": "5de1911a20792ebb649434cba9b8c5508380c32a98b0964fb2fd05fcefc2cbc5",
+        "Eigvec_exciton_tb.hdf5": "13910169ed0b17b3611e4cd6cf704f1386ee27946c7e7d1ad0825c1f3a451673",
+        "Conductivity_exciton_tb.hdf5": "e3eecfcad2af605ab2b4b19bbf3d59b32c0bdf66952a93b1ec0dde7acb5c63a8",
+        "H_k_tb.hdf5": "daae12dc27451784252e7f9bd52d5d620327af28119aa80fe8301ffc8d0e79f3",
+        "Grad_H_k_tb.hdf5": "4007796b459da9e90d7e2e618f4a2a3c1f8d1c047d32e2e3367440904acc5659",
+        "pymex_tb.yaml": "70517deacbfed1ff851b23404a40ad858a0b9bc54f04b23ef654603b3732f1b6",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "b8cf06c6f6458965821c83eeafb9361c48724a51cf4f3a97194672aa4f108592"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "WSe2-independent-N048-p1",
+      "passed": true,
+      "full_state_count": 4608,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "e529a2eaf5ce0feb3c55a082af514ad5b38c4e9234db219971df1bf6ecaa24e2",
+        "Eigval_exciton_tb.hdf5": "b15249f20faf6c00b0ffc606a3f51cc39c3c2e7d13d4a77cb9e6b8a1cd1eb3ab",
+        "Eigvec_exciton_tb.hdf5": "66576658255e5911f7f4cbdf1c6507cbdbaf594c9091f158788c482d79a8fa1a",
+        "Conductivity_exciton_tb.hdf5": "3111866e75cd50be6a5eba165c526444aa21d0eb51b76a32c40e3b44e031f021",
+        "H_k_tb.hdf5": "e1489aaddc0b4f568d5bdb785d9ac9effceffe25b78ec38ee710903b52c8d172",
+        "Grad_H_k_tb.hdf5": "89e949d587f47ecef2de40b239c9ac4aa2aab8e2ceb7b8e9ef6b6a639e135da6",
+        "pymex_tb.yaml": "c259b7e8afa768267b8cfbe199c28058c43c2c322a837ca52c5080bcf41b41e6",
+        "model.py": "83a3dca8152280db41aea33cee1db12faba74686983f9b86e1d92d1aadb13322",
+        "sigma_unpolarized_tb.txt": "d6bc7d2971d87962866a022eca7413dddf8ed1b436c55072603eb304f9a8e045"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-direct-N009-p1",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "0e78a01fd852944d28785ecf7391a1896789a67bb710cb85e959f191ad28461b",
+        "Eigval_exciton_tb.hdf5": "833042e30734ede76c952747f46459cb7e441db8e1c78d06934c1c9b27a12c20",
+        "Eigvec_exciton_tb.hdf5": "43b4ab33e862e0efd0bbb2c282647e92326ad53a4093643b3b545f916c9e5e15",
+        "Conductivity_exciton_tb.hdf5": "65d594b250a1beeb953103b6cf3ad14b5159f48f9c055452f42525dabc9d623e",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "fc66cf751981ec81ea271457843cf33a159617d3176da2e5ceae20e96fb22468",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "0a8d320283db4ad33d281eecbef3876e707d657d6be746ceddbf5c98758bcf6c"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-direct-N009-p4",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "0e78a01fd852944d28785ecf7391a1896789a67bb710cb85e959f191ad28461b",
+        "Eigval_exciton_tb.hdf5": "833042e30734ede76c952747f46459cb7e441db8e1c78d06934c1c9b27a12c20",
+        "Eigvec_exciton_tb.hdf5": "43b4ab33e862e0efd0bbb2c282647e92326ad53a4093643b3b545f916c9e5e15",
+        "Conductivity_exciton_tb.hdf5": "65d594b250a1beeb953103b6cf3ad14b5159f48f9c055452f42525dabc9d623e",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "fc66cf751981ec81ea271457843cf33a159617d3176da2e5ceae20e96fb22468",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "0a8d320283db4ad33d281eecbef3876e707d657d6be746ceddbf5c98758bcf6c"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-direct-exchange-N009-p1",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "e9471564bea5ac53dcc1e7dc6e2971dbe4f64c72af0388bd90470604e3c03869",
+        "Eigval_exciton_tb.hdf5": "74ff91733ff15bcb56d6f4497363d54ca4cc4b32dbfd594743582dda6071ebe2",
+        "Eigvec_exciton_tb.hdf5": "6b4ef7b23e4bea1a9139c8ae0d41b7ffdbe8c3bceb3369363228a24f6130fe11",
+        "Conductivity_exciton_tb.hdf5": "482a79212e1ebeababc884aec1b342eb2f53ce80000382c4b937380c772428ef",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "8582ec12bb0efaca8702c21ac7fb561c59ca9be11b976987eeed207b085e66e6",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "035aba533d3121b9ded24f2963425d0197b14fd80b5c36a6fb5719d4a3e852c8"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-direct-exchange-N009-p4",
+      "passed": true,
+      "full_state_count": 81,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "e9471564bea5ac53dcc1e7dc6e2971dbe4f64c72af0388bd90470604e3c03869",
+        "Eigval_exciton_tb.hdf5": "74ff91733ff15bcb56d6f4497363d54ca4cc4b32dbfd594743582dda6071ebe2",
+        "Eigvec_exciton_tb.hdf5": "6b4ef7b23e4bea1a9139c8ae0d41b7ffdbe8c3bceb3369363228a24f6130fe11",
+        "Conductivity_exciton_tb.hdf5": "482a79212e1ebeababc884aec1b342eb2f53ce80000382c4b937380c772428ef",
+        "H_k_tb.hdf5": "e2603efcf76c1c39cd111760cbde745e02c69d1f96f0a0c2b185b47b768d57b8",
+        "Grad_H_k_tb.hdf5": "5e917e3413e1ece938e3d1ec21731e8dc1cbf1ae697545e66aa4e9cb9c8b20c3",
+        "pymex_tb.yaml": "8582ec12bb0efaca8702c21ac7fb561c59ca9be11b976987eeed207b085e66e6",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "035aba533d3121b9ded24f2963425d0197b14fd80b5c36a6fb5719d4a3e852c8"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-direct-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "774b33de2be713f6d0f1e5efeb0df24ebee72e28e9cf9e78d0f75fba3f61a62b",
+        "Eigval_exciton_tb.hdf5": "2aca207f6b4e21160952082d6c15d0bf466b30265598a765c62441f96f3e5b51",
+        "Eigvec_exciton_tb.hdf5": "9da86759e62905d387e4501a71bf62334da1e8494c500281fe1b711bd2b3ca2a",
+        "Conductivity_exciton_tb.hdf5": "005bdb713d541198e17e8df2be482c7f064537db145f17c3dc6274b3f5ff136b",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "086a7857e3a821354cc9381cb07d8229810173344daa46e449fc749b755ecd07",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "56d5baae52fb22e51c81db9a08c2aac59f2e58a2c07dbcad6b966334fa01dbf9"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-direct-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "774b33de2be713f6d0f1e5efeb0df24ebee72e28e9cf9e78d0f75fba3f61a62b",
+        "Eigval_exciton_tb.hdf5": "2aca207f6b4e21160952082d6c15d0bf466b30265598a765c62441f96f3e5b51",
+        "Eigvec_exciton_tb.hdf5": "9da86759e62905d387e4501a71bf62334da1e8494c500281fe1b711bd2b3ca2a",
+        "Conductivity_exciton_tb.hdf5": "005bdb713d541198e17e8df2be482c7f064537db145f17c3dc6274b3f5ff136b",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "086a7857e3a821354cc9381cb07d8229810173344daa46e449fc749b755ecd07",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "56d5baae52fb22e51c81db9a08c2aac59f2e58a2c07dbcad6b966334fa01dbf9"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-direct-exchange-N009-p1",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "1f9640214310fd239913bf3894866c8cac63a53206245d8464035a0d156f67b6",
+        "Eigval_exciton_tb.hdf5": "fdaac255a43d2da89512d2d6dbf700ae9f4b5fa710d2d1dca99e4b9196eaad74",
+        "Eigvec_exciton_tb.hdf5": "909f6a3ac218c39f5aaa70dba71cbee1d5fc6a1bfdde9daaf2549955bf1dd7d7",
+        "Conductivity_exciton_tb.hdf5": "7a0be77b8bf497999eb0c428b1d28a4e82a62c5fddc288a76d3da68846252d3f",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "1b9811e9c139e82c40468c79c6462d35409072d378e2a8cea892b6ff735b63b7",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "9c703269762997da79dc56f6782663717824456113ea5241b7972f3a1e473774"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-direct-exchange-N009-p4",
+      "passed": true,
+      "full_state_count": 162,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "1f9640214310fd239913bf3894866c8cac63a53206245d8464035a0d156f67b6",
+        "Eigval_exciton_tb.hdf5": "fdaac255a43d2da89512d2d6dbf700ae9f4b5fa710d2d1dca99e4b9196eaad74",
+        "Eigvec_exciton_tb.hdf5": "909f6a3ac218c39f5aaa70dba71cbee1d5fc6a1bfdde9daaf2549955bf1dd7d7",
+        "Conductivity_exciton_tb.hdf5": "7a0be77b8bf497999eb0c428b1d28a4e82a62c5fddc288a76d3da68846252d3f",
+        "H_k_tb.hdf5": "23b2f2249c51dd64c5ff8ed10b4ae54c5efc619983924da948c36c4b2d2b05d5",
+        "Grad_H_k_tb.hdf5": "46281c98b4214768d29ccb045146d6a14b54bf3826fbcbb82502c2acff003c0f",
+        "pymex_tb.yaml": "1b9811e9c139e82c40468c79c6462d35409072d378e2a8cea892b6ff735b63b7",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "9c703269762997da79dc56f6782663717824456113ea5241b7972f3a1e473774"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1-baseline",
+      "passed": true,
+      "full_state_count": 900,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "fb715012d43759ebc833e180fdf8149832b8789db0241f4c8ecc8a598aa0339f",
+        "Eigval_exciton_tb.hdf5": "3fa0e91dfd3381e2e054c4f3543ea2f05b51bc86a0c5e84c043af604d2f07df2",
+        "Eigvec_exciton_tb.hdf5": "febfb3d768084aa72d71cb2d76a7829becabe2464e5ad1526d1a7f2160839ccf",
+        "Conductivity_exciton_tb.hdf5": "b9a5c2af4e686c5fa85bf95ddbe1d84270bc46df44a46d7fb5e5ae0aed86b91b",
+        "H_k_tb.hdf5": "405abb64ea7892a5f951777f0caf157476065d0251413c470626748f596a86f2",
+        "Grad_H_k_tb.hdf5": "9375a30b89c213707b1bf6bfc4ad1a3f9322545f298fd30505aa9c30d7461bf2",
+        "pymex_tb.yaml": "d0862931e4922170dcfe324cb1de64aa2b58fd9e7a652ada5ba6f2bb6f2ccf2b",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "699a9e3ac496f442a260011e46831e22432e9d56ba0e61ba5cb4b81059152101"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 5.329070518200751e-15,
+        "Eigval_exciton_tb.hdf5/Q0": 3.552713678800501e-15,
+        "Eigvec_exciton_tb.hdf5/Q0": 1.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 11.263942707787473,
+        "H_k_tb.hdf5/TB_Hamiltonian": 3.318735928928622e-15,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 3.070725159912542e-10,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 1.9839679587911747e-12
+      },
+      "degeneracy_diagnostics": {
+        "analysis_only": true,
+        "energy_group_tolerance_eV": 1e-10,
+        "groups": 81,
+        "largest_group": 87,
+        "eigenpair_residual_norm_eV": [
+          0.0,
+          0.0
+        ],
+        "subspace_projection_error": 0.0,
+        "within_group_orthogonality_error": 0.0,
+        "grouped_optical_strength_max_absolute_difference": 3.3772380447771866e-09,
+        "grouped_optical_strength_max_difference_relative_to_peak": 1.9818223773433707e-12
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1-timed",
+      "passed": true,
+      "full_state_count": 900,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "eb3b1c66d312f7126425f6d162bf3fe282c4edfbcab826690407a3db09bf5f0e",
+        "Eigval_exciton_tb.hdf5": "f242956d7e3b9e7111a8459416e10d05fb6989e50dd8cc530cae20c9aac7d350",
+        "Eigvec_exciton_tb.hdf5": "a3e47e0193d1aa6534d179b80490ab6186b3535d4d6f6e9bde5f71e9f3bc4f03",
+        "Conductivity_exciton_tb.hdf5": "26e20a5f4d6ab736d6ade4d5ff195def275f4f814304635f4b1e2db6dd22ae25",
+        "H_k_tb.hdf5": "114e5e9d2f7c833f77b6782b45cbbb2fe01aea1eee7b2bd61c70b4cf6d545bf6",
+        "Grad_H_k_tb.hdf5": "a7fe616c0e72c66d8e831419046aa4ae3817ae6d088f5ea5f39f44668adac477",
+        "pymex_tb.yaml": "41b15e2135da839143c6a3ccc5a0c96f454a4180a12c9c7a184a8e734e6e29b1",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "4ae0dde923f113cda71be0b7af4df8ec4634ba02167efb7bd4dfdd7236d9d4d8"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-baseline",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-timed",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1-parent-baseline",
+      "passed": true,
+      "full_state_count": 900,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "fb715012d43759ebc833e180fdf8149832b8789db0241f4c8ecc8a598aa0339f",
+        "Eigval_exciton_tb.hdf5": "3fa0e91dfd3381e2e054c4f3543ea2f05b51bc86a0c5e84c043af604d2f07df2",
+        "Eigvec_exciton_tb.hdf5": "febfb3d768084aa72d71cb2d76a7829becabe2464e5ad1526d1a7f2160839ccf",
+        "Conductivity_exciton_tb.hdf5": "b9a5c2af4e686c5fa85bf95ddbe1d84270bc46df44a46d7fb5e5ae0aed86b91b",
+        "H_k_tb.hdf5": "405abb64ea7892a5f951777f0caf157476065d0251413c470626748f596a86f2",
+        "Grad_H_k_tb.hdf5": "9375a30b89c213707b1bf6bfc4ad1a3f9322545f298fd30505aa9c30d7461bf2",
+        "pymex_tb.yaml": "d0862931e4922170dcfe324cb1de64aa2b58fd9e7a652ada5ba6f2bb6f2ccf2b",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "699a9e3ac496f442a260011e46831e22432e9d56ba0e61ba5cb4b81059152101"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": true,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 5.329070518200751e-15,
+        "Eigval_exciton_tb.hdf5/Q0": 3.552713678800501e-15,
+        "Eigvec_exciton_tb.hdf5/Q0": 1.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 11.263942707787473,
+        "H_k_tb.hdf5/TB_Hamiltonian": 3.318735928928622e-15,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 3.070725159912542e-10,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 1.9839679587911747e-12
+      },
+      "degeneracy_diagnostics": {
+        "analysis_only": true,
+        "energy_group_tolerance_eV": 1e-10,
+        "groups": 81,
+        "largest_group": 87,
+        "eigenpair_residual_norm_eV": [
+          0.0,
+          0.0
+        ],
+        "subspace_projection_error": 0.0,
+        "within_group_orthogonality_error": 0.0,
+        "grouped_optical_strength_max_absolute_difference": 3.3772380447771866e-09,
+        "grouped_optical_strength_max_difference_relative_to_peak": 1.9818223773433707e-12
+      }
+    },
+    {
+      "case": "hBN-independent-N030-p1-parent-optimized",
+      "passed": true,
+      "full_state_count": 900,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "eb3b1c66d312f7126425f6d162bf3fe282c4edfbcab826690407a3db09bf5f0e",
+        "Eigval_exciton_tb.hdf5": "f242956d7e3b9e7111a8459416e10d05fb6989e50dd8cc530cae20c9aac7d350",
+        "Eigvec_exciton_tb.hdf5": "a3e47e0193d1aa6534d179b80490ab6186b3535d4d6f6e9bde5f71e9f3bc4f03",
+        "Conductivity_exciton_tb.hdf5": "26e20a5f4d6ab736d6ade4d5ff195def275f4f814304635f4b1e2db6dd22ae25",
+        "H_k_tb.hdf5": "114e5e9d2f7c833f77b6782b45cbbb2fe01aea1eee7b2bd61c70b4cf6d545bf6",
+        "Grad_H_k_tb.hdf5": "a7fe616c0e72c66d8e831419046aa4ae3817ae6d088f5ea5f39f44668adac477",
+        "pymex_tb.yaml": "41b15e2135da839143c6a3ccc5a0c96f454a4180a12c9c7a184a8e734e6e29b1",
+        "model.py": "51786c46b6ef915b845f0b1239242c1d63d6977518b0543891b987478d52043b",
+        "sigma_unpolarized_tb.txt": "4ae0dde923f113cda71be0b7af4df8ec4634ba02167efb7bd4dfdd7236d9d4d8"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-parent-baseline",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9"
+      },
+      "reference_hashes_checked_against_status": true,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    },
+    {
+      "case": "MoS2-independent-N030-p1-parent-optimized",
+      "passed": true,
+      "full_state_count": 1800,
+      "physical_inputs_identical": true,
+      "model_hash_identical": true,
+      "all_arrays_finite": true,
+      "candidate_hashes_verified": true,
+      "reference_hashes": {
+        "H_exciton_tb.hdf5": "7eb05035c2942889643af685799bf1d58729bccbb1daaf1b285a325d581e0f88",
+        "Eigval_exciton_tb.hdf5": "37ef13c1b314b19b1b2ddd5e99440d503bdd29b67959d0a83bbb064993637333",
+        "Eigvec_exciton_tb.hdf5": "c3a643a295f9c435152a153cce9566e9be555e5cbf737d225cba1e8f73918340",
+        "Conductivity_exciton_tb.hdf5": "17ad2f23cd81ff1346219e3ae56e7fef23fa09e042fac93c5e08bf64c11cef63",
+        "H_k_tb.hdf5": "b5cc50ddf131b0b66ef54e0fce4103c5484c3d769a18870ec4a05302e9c276bd",
+        "Grad_H_k_tb.hdf5": "4c9d7d925d637cb9cdd2b3a8b3c60c90a3db51aa8c6e4aaf3e7a94f2dccea5c9",
+        "pymex_tb.yaml": "d1274eeebae29f598e940d5d8355ac9ebdf477bd9ed59df2c2fbab2d166e8d8a",
+        "model.py": "5c4afe80c70ff74b13bd30b12974eb74fc75bd394928af976479c99957f652ff",
+        "sigma_unpolarized_tb.txt": "fee7c17873ca96db37d1a0d27e0648689075cedda095d50cc0c2d2be9edc6fb9"
+      },
+      "reference_hashes_checked_against_status": false,
+      "cross_platform_reference": false,
+      "errors": {
+        "H_exciton_tb.hdf5/exciton_H": 0.0,
+        "Eigval_exciton_tb.hdf5/Q0": 0.0,
+        "Eigvec_exciton_tb.hdf5/Q0": 0.0,
+        "Conductivity_exciton_tb.hdf5/optical_conductivity": 0.0,
+        "H_k_tb.hdf5/TB_Hamiltonian": 0.0,
+        "Grad_H_k_tb.hdf5/TB_Gradient_Hamiltonian": 0.0,
+        "photon_energy_axis_max_difference_eV": 0.0,
+        "native_spectrum_max_difference_relative_to_peak": 0.0
+      }
+    }
+  ]
+}
