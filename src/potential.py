@@ -37,8 +37,9 @@ class POTENTIAL(object):
     self.kgrid = kgrid 
     if self.kgrid is None:
       self.kgrid = self.wan2bse.get_kgrid()
-    self.A_s = unit2super(self.kgrid, self.A)
-    
+    # Lattice vectors are rows; minimum-image routines below expect columns.
+    # This matches the geometry correction already used by the project runtime.
+    self.A_s = (np.diag(self.kgrid) @ self.A).T
 
 
   def distribute_full(self, num_p, rank, size):
@@ -180,9 +181,9 @@ class POTENTIAL(object):
     n3s = g3.ravel()
 
     # shift vectors: shape (n_shifts, 3)
-    shifts = (n1s[:, None] * self.A_s[0] +
-      n2s[:, None] * self.A_s[1] +
-      n3s[:, None] * self.A_s[2])
+    shifts = (n1s[:, None] * self.A_s[:, 0] +
+      n2s[:, None] * self.A_s[:, 1] +
+      n3s[:, None] * self.A_s[:, 2])
 
     pos = wanfuncs_pos[:, :3]
 
@@ -238,7 +239,7 @@ class POTENTIAL(object):
       shifts = [[0], [0], [0]]
     else:
       print_f(f"ERROR: material_type must be '0D', '1D', '2D', or '3D', "
-              f"got '{self.material_type}'")
+              f"got '{material_type}'")
       comm.Abort(1)
 
     best_delta = delta[:3].copy()
@@ -249,9 +250,9 @@ class POTENTIAL(object):
       for n2 in shifts[1]:
         for n3 in shifts[2]:
           trial = (delta[:3]
-                  + n1 * self.A_s[0]
-                  + n2 * self.A_s[1]
-                  + n3 * self.A_s[2])
+                  + n1 * self.A_s[:, 0]
+                  + n2 * self.A_s[:, 1]
+                  + n3 * self.A_s[:, 2])
           dist2 = np.dot(trial, trial)
           shift = (n1, n2, n3)
 
@@ -331,8 +332,8 @@ class POTENTIAL(object):
     C, epsilon_b, epsilon_t = sp.symbols('C epsilon_b epsilon_t', real=True)
     params_dict = {}
 
-    params_dict[epsilon_t] = epsilon_t_val
-    params_dict[epsilon_b] = epsilon_b_val
+    params_dict[epsilon_b] = epsilon_t_val
+    params_dict[epsilon_t] = epsilon_b_val
     n_layers = len(chi_list)
     for i in range(n_layers):
       chi_sym = sp.symbols(f'chi_{i+1}')
@@ -496,7 +497,7 @@ class POTENTIAL(object):
     rng        = list(range(-1, 2))
     shifts     = np.array([(s1, s2, 0) for s1 in rng for s2 in rng],
                             dtype=np.float64)
-    shift_vecs = np.ascontiguousarray(shifts @ self.A_s, dtype=np.float64)
+    shift_vecs = np.ascontiguousarray(shifts @ self.A_s.T, dtype=np.float64)
 
     # contiguous arrays for Cython
     Rvec_c = np.ascontiguousarray(Rvec[:, :3],      dtype=np.float64)
@@ -544,6 +545,8 @@ class POTENTIAL(object):
         for indices, chunk in all_data:
           for local_i, global_i in enumerate(indices):
             Vr_full[:, global_i, :] = chunk[:, local_i, :]
+
+      Vr_full = self.symmetrise_potential(Vr_full, Rvec)
 
       # Write to HDF5
       with h5py.File(screened_file, "w") as f:
@@ -705,6 +708,8 @@ class POTENTIAL(object):
           for local_i, global_i in enumerate(indices):
             Vr_full[:, global_i, :] = chunk[:, local_i, :]
 
+      Vr_full = self.symmetrise_potential(Vr_full, Rvec)
+
       # Write to HDF5
       with h5py.File(screened_file, "w") as f:
         f.create_dataset("W", data=Vr_full)
@@ -780,7 +785,38 @@ class POTENTIAL(object):
           for local_i, global_i in enumerate(indices):
             Vr_full[:, global_i, :] = chunk[:, local_i, :]
 
+      Vr_full = self.symmetrise_potential(Vr_full, Rvec)
+
       with h5py.File(bare_file, "w") as f:
         f.create_dataset("V", data=Vr_full)
       print_f(f"Unscreened Coulomb potential written to {bare_file}")
     return None
+
+
+  def symmetrise_potential(self, Vr_full, Rvec):
+    """
+    Enforce V[R,i,j] = V[-R,j,i] for all R-vectors.
+    For Nyquist points where -R is not in the grid,
+    enforce V[R,i,j] = V[R,j,i] (self-symmetry).
+    Must be called on root only, after Vr_full is assembled.
+    """
+    Rvec_tuples   = [tuple(np.round(r, 8)) for r in Rvec]
+    Rvec_index    = {r: i for i, r in enumerate(Rvec_tuples)}
+    nyquist_count = 0
+
+    for i_R in range(len(Rvec)):
+      mR_key = tuple(np.round(-Rvec[i_R], 8))
+      if mR_key in Rvec_index:
+        j_R = Rvec_index[mR_key]
+        if i_R < j_R:
+          avg          = 0.5 * (Vr_full[i_R] + Vr_full[j_R].T)
+          Vr_full[i_R] = avg
+          Vr_full[j_R] = avg.T
+      else:
+        Vr_full[i_R] = 0.5 * (Vr_full[i_R] + Vr_full[i_R].T)
+        nyquist_count += 1
+
+    if nyquist_count > 0:
+      print_f(f"  Symmetrised {nyquist_count} Nyquist R-points")
+
+    return Vr_full

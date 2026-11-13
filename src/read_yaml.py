@@ -3,6 +3,7 @@
 import os, sys
 import yaml
 import numpy as np
+from python_tb_config import uses_python_model
 from datetime import datetime
 from functools import partial
 from mpi4py import MPI
@@ -179,6 +180,8 @@ def check_wannier_io(bse):
   """
   Check if the wannier90 input/output files are specified correctly.
   """
+  if uses_python_model({"bse": bse}):
+    return
   valid_wannier = {'wannier90'}
   if bse["wannier_io"] is None:
     print_f("ERROR: 'wannier_io' must be specified.")
@@ -209,7 +212,7 @@ def check_bse(bse):
         print_f("ERROR: 'bands' must be specified for dft bse method.")
         comm.Abort(1)
       else:
-        valid_dft_engine = {'quantum_espresso', 'siesta'}
+        valid_dft_engine = {'vasp', 'quantum_espresso', 'siesta'}
         if bse["dft"]["bands"]["engine"] not in valid_dft_engine: 
           print_f(f'ERROR: Invalid engine {bse["dft"]["bands"]["engine"]}. Must be one of: {valid_dft_engine}')
           comm.Abort(1)
@@ -231,7 +234,7 @@ def check_bse(bse):
       if bse["tb"]["bands"] is None:
         print_f("ERROR: 'bands' must be specified for tb bse method.")
         comm.Abort(1)
-      valid_tb_engine = {'wannier90'}
+      valid_tb_engine = {'python'} if uses_python_model({"bse": bse}) else {'wannier90'}
       if bse["tb"]["bands"]["engine"] not in valid_tb_engine: 
         print_f(f'ERROR: Invalid engine {bse["tb"]["bands"]["engine"]}. Must be one of: {valid_tb_engine}')
         comm.Abort(1)
@@ -282,7 +285,7 @@ def check_absorption(absorption):
     # Validate spinorbit absorption
     valid_soc_type = {'perturbation', 'full'}
     if absorption["spinorbit"]["type"] not in valid_soc_type:
-      print_f(f"ERROR: Invalid spinorbit type '{absorption["spinorbit"]["type"]}'. Must be one of: {', '.join(valid_soc_type)}")
+      #print_f(f"ERROR: Invalid spinorbit type '{absorption["spinorbit"]["type"]}'. Must be one of: {', '.join(valid_soc_type)}")
       comm.Abort(1)
     elif absorption["spinorbit"]["type"] == 'perturbation':
       if absorption["spinorbit"]["unfold"]:
@@ -302,7 +305,7 @@ def check_system(system):
   """
   valid_system = {'cpu', 'gpu'}
   if system not in valid_system:
-    print_f(f"ERROR: Invalid system type '{system}'. Must be one of: {', '.join(valid_system)}")
+    #print_f(f"ERROR: Invalid system type '{system}'. Must be one of: {', '.join(valid_system)}")
     comm.Abort(1)
   elif system == 'gpu':
     print_f("WARNING: GPU support is experimental and may not work as expected.")
@@ -312,7 +315,7 @@ def check_diagonalization(diagonalize):
   """
   Check if the diagonalization parameters are valid.
   """
-  valid_library = {'lapack', 'elpa'}
+  valid_library = {'primme', 'lapack', 'elpa', 'slepc'}
   if diagonalize["library"] not in valid_library:
-    print_f(f"ERROR: Invalid diagonalization library '{diagonalize["library"]}'. Must be one of: {', '.join(valid_library)}")
+    #print_f(f"ERROR: Invalid diagonalization library '{diagonalize["library"]}'. Must be one of: {', '.join(valid_library)}")
     comm.Abort(1)
